@@ -1,0 +1,80 @@
+html,
+body {
+    background: #343434;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+    .animate-section {
+        position: relative;
+        height: 100%;
+        svg {
+            position: absolute;
+            width: 100%;
+            top: -20%;
+            @media only screen and (max-width: 991px) {
+                top: 0;
+                height: 100%;
+            }
+            @media only screen and (max-width: 767px) {
+                top: 0;
+                height: unset;
+            }
+        }
+        .content {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+            justify-content: center;
+            z-index: 100;
+            position: relative;
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+                padding-left: 20px;
+            }
+            h1 {
+                font-size: 2.4em;
+                line-height: 50px;
+                @media only screen and (max-width: 991px) {
+                    font-size: 1.8em;
+                    line-height: 40px;
+                }
+                @media only screen and (max-width: 767px) {
+                    font-size: 1.5em;
+                    line-height: 40px;
+                }
+            }
+            .quote-container {
+                display: flex;
+                width: 100%;
+                place-content: unset;
+                .avatar {
+                    width: 25px;
+                    height: 25px;
+                    background: gray;
+                    border-radius: 50%;
+                }
+                p {
+                    margin: 0.3em 0.5em;
+                    font-size: 0.9em;
+                }
+            }
+            .cta {
+                margin-top: 2em;
+                width: 30%;
+                display: inline-block;
+                background: #00e472;
+                color: black;
+                text-decoration: none;
+                padding: 0.5em 1em;
+                border-radius: 0.2em;
+                font-weight: bold;
+                @media only screen and (max-width: 991px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
