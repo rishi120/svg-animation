@@ -1,17 +1,81 @@
+/* variables */
+
+$poppins: "Poppins",
+sans-serif;
+$nunito: "Nunito",
+sans-serif;
+$mq7b: "screen and (max-width: 767px)";
 html,
 body {
-    background: #343434;
     color: white;
     height: 100%;
-    overflow: hidden;
-    font-family: "Nunito", sans-serif;
-    .animate-section {
+    margin: 0;
+    // overflow: hidden;
+    .mosphism-ui {
+        background: rgb(200, 231, 220);
+        height: 100vh;
         position: relative;
-        height: 100%;
+        margin-bottom: 10px;
+        img {
+            height: 100%;
+            z-index: -2;
+            @media #{$mq7b} {
+                width: 100%;
+            }
+        }
+        .glass {
+            position: absolute;
+            top: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2em;
+            border-radius: 3em;
+            z-index: 1;
+            backdrop-filter: blur(40px);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+            margin-top: -140px;
+            left: 20%;
+            @media #{$mq7b} {
+                left: 10px;
+                right: 10px;
+            }
+            h2 {
+                font: 1.4em $poppins;
+                margin: 0;
+                color: #000;
+                font-weight: 600;
+            }
+            p {
+                margin: 0;
+                color: #000;
+            }
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            font: 40px $poppins;
+            font-weight: 600;
+            color: #000;
+            clip-path: inset(0 0 0 0);
+            @media #{$mq7b} {
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+    .animate-section {
+        background: #343434;
+        position: relative;
+        height: 100vh;
+        width: 100%;
         svg {
             position: absolute;
             width: 100%;
-            top: -20%;
+            top: 0%;
+            height: 100%;
             @media only screen and (max-width: 991px) {
                 top: 0;
                 height: 100%;
@@ -35,7 +99,7 @@ body {
                 padding-left: 20px;
             }
             h1 {
-                font-size: 2.4em;
+                font: 2.4em $nunito;
                 line-height: 50px;
                 @media only screen and (max-width: 991px) {
                     font-size: 1.8em;
@@ -58,7 +122,7 @@ body {
                 }
                 p {
                     margin: 0.3em 0.5em;
-                    font-size: 0.9em;
+                    font: 0.9em $nunito;
                 }
             }
             .cta {
